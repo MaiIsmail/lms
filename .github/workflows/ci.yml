@@ -75,6 +75,9 @@ jobs:
     - name: bench build
       working-directory: /home/runner/frappe-bench
       run: bench --site frappe.local build
+    - name: bench migrate
+      working-directory: /home/runner/frappe-bench
+      run: bench --site frappe.local migrate
     - name: run tests
       working-directory: /home/runner/frappe-bench
       run: bench --site frappe.local run-tests --app lms
